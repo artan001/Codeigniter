@@ -8,28 +8,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 /**
- * Description of Login_Controller
+ * Description of test_login
  *
  * @author Artan.s
  */
-class Login_Controller extends CI_Controller {
+class Test_login extends CI_Controller {
 
-    function __construct() {
+    public function __construct() {
         parent::__construct();
         $this->load->model('login_model');
     }
-
-    public function index() {
-        $data = array();
-        $data['top'] = 'layout/home/head_home';
-        $data['header'] = 'layout/home/header_home';
-        $data['page'] = 'home';
-        $data['down'] = 'layout/down_home';
-        $data['modal'] = 'layout/home/modal_home';
-        $this->load->view(TEMPLATE_WELCOME, $data);
+    public function index(){
+        $this->load->view('testv');
     }
-
-    public function login() {
+    public function login_test() {
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $query = $this->login_model->user_login($username, $password);
@@ -38,30 +30,29 @@ class Login_Controller extends CI_Controller {
             $chk = $query->type;
             if ($chk == '1') {
                 $this->session->set_userdata('user', $chk);
+//                echo $chk . "admin";
+//                echo '<div class="button banner_button"><a href="../test_login/logout">LOGOUT</a></div>';
                 $obj["message"] = "- กรุณตรวจสอบ username กับ password ให้ถูกต้อง1 \n";
             } else {
                 $this->session->set_userdata('user', $chk);
                 $obj["message"] = "- กรุณตรวจสอบ username กับ password ให้ถูกต้อง2 \n";
+//                echo $chk . "user";
+//                echo '<div class="button banner_button"><a href="../test_login/logout">LOGOUT</a></div>';
             }
             $obj["result"] = true;
         } else {
             $this->session->set_userdata('user', 'null');
+//            echo "ไม่มีในระบบ";
+//            echo '<div class="button banner_button"><a href="../test_login/logout">LOGOUT</a></div>';
             $obj["result"] = false;
             $obj["message"] = "- กรุณตรวจสอบ username กับ password ให้ถูกต้อง \n";
         }
         echo json_encode($obj);
     }
-    
-    public function chkUserSession(){
-        $chk = $this->seccion->userdata('user');
-//        ตรวจสอบ session
-        
-        
-    }
-    
+
     public function logout() {
         $this->session->sess_destroy();
-        redirect('/', 'refresh');
+        redirect('/test_login');
         exit;
     }
 

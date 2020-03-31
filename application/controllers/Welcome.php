@@ -32,4 +32,14 @@ class Welcome extends CI_Controller {
             $data['modal'] = 'layout/home/modal_home';
             $this->load->view(TEMPLATE_WELCOME,$data);
 	}
+        
+        public function login() {
+            $data = array();
+            $data['page'] = 'login_page';
+            $this->load->view('login_page');
+        }
+        
+       public function login1() {
+            $this->load->view('welcome_message');
+        }
 }

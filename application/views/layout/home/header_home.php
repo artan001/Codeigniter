@@ -33,7 +33,36 @@
                         <div class="top_bar_user">
                             <div class="user_icon"><img src="assets/images/user.svg" alt=""></div>
                             <div><a href="#">Register</a></div>
-                            <div><a data-toggle="modal" data-target="#modal-login" href="#">Sign in</a></div>
+                            <!--<div><a data-toggle="modal" data-target="#modal-login" href="#">Sign in</a></div>-->
+                            <?php $ses = $this->session->userdata('user');
+                             if (!empty($ses)){?>                            
+                                <?php if ($ses == '1'){?>
+                                    <div><a  onclick="Logout()" href="">Admin</a></div>
+                                <?php }elseif ($ses == '2'){?>
+                                    <div><a  onclick="Logout()" href="">User</a></div>
+                                <?php }else {?>
+                                    <div><a  onclick="Logout()" href="">Logout</a></div>
+                                <?php } ?>
+                                    
+                            <?php }else{?>
+                                <div><a data-toggle="modal" data-target="#modal-login" href="#">Sign in</a></div>       
+                            <?php }?>
+                            
+<!--                              $ses = $this->session->userdata('user');
+                                if (!empty($ses)){
+                                <div><a  id="btn-logout"  href="#">
+                                  if ($ses == '1'){
+                                    ADMIN
+                                  }elseif ($ses == '2'){
+                                    USER
+                                  }else {
+                                    LOGOUT
+                                  } 
+                                 </a></div>   
+                             }else{
+                                <div><a data-toggle="modal" data-target="#modal-login" href="#">Sign in</a></div>       
+                             }-->
+                                     
                         </div>
                     </div>
                 </div>

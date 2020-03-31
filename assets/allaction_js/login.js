@@ -43,7 +43,7 @@ $('#btn-login').on('click', function () {
     }
 
     $.ajax({
-        url: "login_controller/login",
+        url: "Login_Controller/login",
         type: "POST",
         dataType: "JSON",
         data: {
@@ -52,13 +52,11 @@ $('#btn-login').on('click', function () {
         }, success: function (resp) {
             console.log(resp);
             if (resp.result == true) {
-//                window.location = "welcome";
-                displayError(true, resp.message);
+                window.location = "welcome";
             } else {
                 displayError(true, resp.message);
             }
         }, error: function (error) {
-            displayError(true, resp.message);
             console.log(error);
 
         }
@@ -73,4 +71,8 @@ function displayError(show, message) {
         $('#message-alert-login').hide();
     }
     $('#message-alert-login').html(message);
+}
+
+function Logout(){
+    window.location = "login_controller/logout";
 }
