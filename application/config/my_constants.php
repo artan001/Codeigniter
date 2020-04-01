@@ -17,8 +17,14 @@ define('LOG_WITH_USER', 2); //   errors
 define('TABLE_LOG','PCC_AUTHEN_LOG'); //Table Log
 //template
 
-define('TEMPLATE_WELCOME', 'template/TEMPLATE-HOME'); //  
-define('TEMPLATE_SHOP', 'template/TEMPLATE-SHOP'); // 
+define('TEMPLATE_WELCOME', 'template/TEMPLATE-HOME'); //  หน้าแรก
+define('TEMPLATE_SHOP', 'template/TEMPLATE-SHOP'); //   หน้า shop
+define('TEMPLATE_PRODUCT', 'template/TEMPLATE-PRODUCT'); //   หน้าสินค้า
+define('TEMPLATE_CART', 'template/TEMPLATE-CART'); // 
+define('TEMPLATE_BLOG', 'template/TEMPLATE-BLOG'); // 
+define('TEMPLATE_BLOGSINGLE', 'template/TEMPLATE-BLOGSINGLE'); // 
+define('TEMPLATE_CONTACT', 'template/TEMPLATE-CONTACT'); // 
+define('TEMPLATE_REGULAR', 'template/TEMPLATE-REGULAR'); //
 
 
 
