@@ -18,6 +18,7 @@ define('TABLE_LOG','PCC_AUTHEN_LOG'); //Table Log
 //template
 
 define('TEMPLATE_WELCOME', 'template/TEMPLATE-HOME'); //  
+define('TEMPLATE_SHOP', 'template/TEMPLATE-SHOP'); // 
 
 
 

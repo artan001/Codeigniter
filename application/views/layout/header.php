@@ -15,19 +15,18 @@
                                 <li>
                                     <a href="#">English<i class="fas fa-chevron-down"></i></a>
                                     <ul>
-                                        <li><a href="#">Italian</a></li>
-                                        <li><a href="#">Spanish</a></li>
-                                        <li><a href="#">Japanese</a></li>
+                                        <li><a href="#">English</a></li>
+                                        <li><a href="#">Thai</a></li>                                     
                                     </ul>
                                 </li>
-                                <li>
+<!--                                <li>
                                     <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
                                     <ul>
                                         <li><a href="#">EUR Euro</a></li>
                                         <li><a href="#">GBP British Pound</a></li>
                                         <li><a href="#">JPY Japanese Yen</a></li>
                                     </ul>
-                                </li>
+                                </li>-->
                             </ul>
                         </div>
                         <div class="top_bar_user">
@@ -191,7 +190,7 @@
 
                         <div class="main_nav_menu ml-auto">
                             <ul class="standard_dropdown main_nav_dropdown">
-                                <li><a href="index.html">Home<i class="fas fa-chevron-down"></i></a></li>
+                                <li><a href="welcome">Home<i class="fas fa-chevron-down"></i></a></li>
                                 <li class="hassubs">
                                     <a href="#">Super Deals<i class="fas fa-chevron-down"></i></a>
                                     <ul>
@@ -227,7 +226,7 @@
                                 <li class="hassubs">
                                     <a href="#">Pages<i class="fas fa-chevron-down"></i></a>
                                     <ul>
-                                        <li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="Shop_Controller">Shop<i class="fas fa-chevron-down"></i></a></li>
                                         <li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
                                         <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
                                         <li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>

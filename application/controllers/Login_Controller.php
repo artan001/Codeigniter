@@ -22,8 +22,9 @@ class Login_Controller extends CI_Controller {
     public function index() {
         $data = array();
         $data['top'] = 'layout/home/head_home';
-        $data['header'] = 'layout/home/header_home';
+        $data['header'] = 'layout/header';
         $data['page'] = 'home';
+        $data['footer'] = 'layout/footer';
         $data['down'] = 'layout/down_home';
         $data['modal'] = 'layout/home/modal_home';
         $this->load->view(TEMPLATE_WELCOME, $data);
@@ -51,14 +52,12 @@ class Login_Controller extends CI_Controller {
         }
         echo json_encode($obj);
     }
-    
-    public function chkUserSession(){
+
+    public function chkUserSession() {
         $chk = $this->seccion->userdata('user');
 //        ตรวจสอบ session
-        
-        
     }
-    
+
     public function logout() {
         $this->session->sess_destroy();
         redirect('/', 'refresh');
