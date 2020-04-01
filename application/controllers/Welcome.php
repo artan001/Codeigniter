@@ -31,7 +31,8 @@ class Welcome extends CI_Controller {
         $data['page'] = 'home';
         $data['footer'] = 'layout/footer';
         $data['down'] = 'layout/down_home';
-        $data['modal'] = 'layout/home/modal_home';
+        $data['modal'] = ['layout/modal/modal_login',
+                          'layout/modal/modal_register'];
         $this->load->view(TEMPLATE_WELCOME, $data);
     }
 

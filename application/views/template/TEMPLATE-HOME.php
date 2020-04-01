@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html lang="en">
     <head>
-        <title>THANOOLUK</title>
+        <title>HOME</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="THANOOLUK shop project">
@@ -32,14 +32,17 @@ and open the template in the editor.
     </head>
     <body>
         <div class="super_container">
+            
             <?php
             $this->load->view("/" . $header);
             $this->load->view("/" . $page);
-            $this->load->view("/" . $footer);
-            $this->load->view("/" . $modal);
+            $this->load->view("/" . $footer);            
+            foreach ( $modal as $value){
+                $this->load->view("/" . $value);
+            }
             ?>
+            
         </div>
-        <script src="assets/allaction_js/login.js"></script>
         <!--Jquery-->
         <script src="assets/jquery/jquery-3.3.1.min.js"></script>
         

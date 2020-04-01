@@ -40,10 +40,12 @@ and open the template in the editor.
             <?php
             $this->load->view("/" . $header);
             $this->load->view("/" . $page);
-            $this->load->view("/" . $footer);
-//            $this->load->view("/" . $modal);
+            $this->load->view("/" . $footer);            
+            foreach ( $modal as $value){
+                $this->load->view("/" . $value);
+            }
             ?>
-
+            
         </div>
 
         <script src="assets/js/custom/jquery-3.3.1.min.js"></script>

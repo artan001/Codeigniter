@@ -19,49 +19,50 @@
                                         <li><a href="#">Thai</a></li>                                     
                                     </ul>
                                 </li>
-<!--                                <li>
-                                    <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
-                                    <ul>
-                                        <li><a href="#">EUR Euro</a></li>
-                                        <li><a href="#">GBP British Pound</a></li>
-                                        <li><a href="#">JPY Japanese Yen</a></li>
-                                    </ul>
-                                </li>-->
+                                <!--                                <li>
+                                                                    <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
+                                                                    <ul>
+                                                                        <li><a href="#">EUR Euro</a></li>
+                                                                        <li><a href="#">GBP British Pound</a></li>
+                                                                        <li><a href="#">JPY Japanese Yen</a></li>
+                                                                    </ul>
+                                                                </li>-->
                             </ul>
                         </div>
                         <div class="top_bar_user">
                             <div class="user_icon"><img src="assets/images/user.svg" alt=""></div>
-                            <div><a href="#">Register</a></div>
+                            <div><a data-toggle="modal" data-target="#modal-register" href="#">Register</a></div>
                             <!--<div><a data-toggle="modal" data-target="#modal-login" href="#">Sign in</a></div>-->
                             <?php $ses = $this->session->userdata('user');
-                             if (!empty($ses)){?>                            
-                                <?php if ($ses == '1'){?>
+                            if (!empty($ses)) {
+                                ?>                            
+                                <?php if ($ses == '1') { ?>
                                     <div><a  onclick="Logout()" href="">Admin</a></div>
-                                <?php }elseif ($ses == '2'){?>
+                                <?php } elseif ($ses == '2') { ?>
                                     <div><a  onclick="Logout()" href="">User</a></div>
-                                <?php }else {?>
+                                <?php } else { ?>
                                     <div><a  onclick="Logout()" href="">Logout</a></div>
                                 <?php } ?>
-                                    
-                            <?php }else{?>
-                                <div><a data-toggle="modal" data-target="#modal-login" href="#">Sign in</a></div>       
-                            <?php }?>
-                            
-<!--                              $ses = $this->session->userdata('user');
-                                if (!empty($ses)){
-                                <div><a  id="btn-logout"  href="#">
-                                  if ($ses == '1'){
-                                    ADMIN
-                                  }elseif ($ses == '2'){
-                                    USER
-                                  }else {
-                                    LOGOUT
-                                  } 
-                                 </a></div>   
-                             }else{
-                                <div><a data-toggle="modal" data-target="#modal-login" href="#">Sign in</a></div>       
-                             }-->
-                                     
+
+                            <?php } else { ?>
+                                <div><a data-toggle="modal" data-target="#modal-login" href="">Sign in</a></div>       
+                            <?php } ?>
+
+                            <!--                              $ses = $this->session->userdata('user');
+                                                            if (!empty($ses)){
+                                                            <div><a  id="btn-logout"  href="#">
+                                                              if ($ses == '1'){
+                                                                ADMIN
+                                                              }elseif ($ses == '2'){
+                                                                USER
+                                                              }else {
+                                                                LOGOUT
+                                                              } 
+                                                             </a></div>   
+                                                         }else{
+                                                            <div><a data-toggle="modal" data-target="#modal-login" href="#">Sign in</a></div>       
+                                                         }-->
+
                         </div>
                     </div>
                 </div>
@@ -227,15 +228,21 @@
                                     <a href="#">Pages<i class="fas fa-chevron-down"></i></a>
                                     <ul>
                                         <li><a href="Shop_Controller">Shop<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="Product_Controller">Product<i class="fas fa-chevron-down"></i></a></li>
+                                        <!--<li><a href="Blog_Controller">Blog<i class="fas fa-chevron-down"></i></a></li>-->
+                                        <!--<li><a href="BlogSingle_Controller">Blog Post<i class="fas fa-chevron-down"></i></a></li>-->
+                                        <li><a href="Regular_Controller">Regular Post<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="Cart_Controller">Cart<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="Contact_Controller">Contact<i class="fas fa-chevron-down"></i></a></li>
                                     </ul>
                                 </li>
-                                <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
+                                <li class="hassubs">
+                                    <a href="#">Blog<i class="fas fa-chevron-down"></i></a>
+                                    <ul>
+                                        <li><a href="Blog_Controller">Blog<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="BlogSingle_Controller">Blog Post<i class="fas fa-chevron-down"></i></a></li>                                        
+                                    </ul>
+                                </li>
                                 <li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
                             </ul>
                         </div>

@@ -26,7 +26,8 @@ class Login_Controller extends CI_Controller {
         $data['page'] = 'home';
         $data['footer'] = 'layout/footer';
         $data['down'] = 'layout/down_home';
-        $data['modal'] = 'layout/home/modal_home';
+        $data['modal'] = ['layout/modal/modal_login',
+                          'layout/modal/modal_register'];
         $this->load->view(TEMPLATE_WELCOME, $data);
     }
 
@@ -38,11 +39,9 @@ class Login_Controller extends CI_Controller {
         if ($query) {
             $chk = $query->type;
             if ($chk == '1') {
-                $this->session->set_userdata('user', $chk);
-                $obj["message"] = "- กรุณตรวจสอบ username กับ password ให้ถูกต้อง1 \n";
+                $this->session->set_userdata('user', $chk);                
             } else {
                 $this->session->set_userdata('user', $chk);
-                $obj["message"] = "- กรุณตรวจสอบ username กับ password ให้ถูกต้อง2 \n";
             }
             $obj["result"] = true;
         } else {

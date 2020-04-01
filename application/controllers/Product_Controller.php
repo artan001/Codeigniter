@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -7,22 +8,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 /**
- * Description of Shop_Controller
+ * Description of Product_Controller
  *
  * @author Artan.s
  */
-class Shop_Controller extends CI_Controller{
+class Product_Controller extends CI_Controller {
+
     public function __construct() {
         parent::__construct();
     }
-    
-    public function index(){
-       $data = array();
-       $data['header'] = 'layout/header';
-       $data['page'] = 'layout/shop/page_shop';
-       $data['footer'] = 'layout/footer';
-       $data['modal'] = ['layout/modal/modal_login',
+
+    public function index() {
+        $data = array();
+        $data['header'] = 'layout/header';
+        $data['page'] = 'layout/product/page_product';
+        $data['footer'] = 'layout/footer';
+        $data['modal'] = ['layout/modal/modal_login',
                           'layout/modal/modal_register'];
-       $this->load->view(TEMPLATE_SHOP,$data);
+        $this->load->view(TEMPLATE_PRODUCT, $data);
     }
+
 }
