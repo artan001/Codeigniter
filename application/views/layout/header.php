@@ -19,23 +19,21 @@
                                         <li><a href="#">Thai</a></li>                                     
                                     </ul>
                                 </li>
-                                <!--                                <li>
-                                                                    <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
-                                                                    <ul>
-                                                                        <li><a href="#">EUR Euro</a></li>
-                                                                        <li><a href="#">GBP British Pound</a></li>
-                                                                        <li><a href="#">JPY Japanese Yen</a></li>
-                                                                    </ul>
-                                                                </li>-->
+                                <!--<li>
+                                    <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
+                                        <ul>
+                                            <li><a href="#">EUR Euro</a></li>
+                                            <li><a href="#">GBP British Pound</a></li>
+                                            <li><a href="#">JPY Japanese Yen</a></li>
+                                        </ul>
+                                    </li>-->
                             </ul>
                         </div>
                         <div class="top_bar_user">
                             <div class="user_icon"><img src="assets/images/user.svg" alt=""></div>
-                            <div><a data-toggle="modal" data-target="#modal-register" href="#">Register</a></div>
+                            <?php $ses = $this->session->userdata('user'); ?>
                             <!--<div><a data-toggle="modal" data-target="#modal-login" href="#">Sign in</a></div>-->
-                            <?php $ses = $this->session->userdata('user');
-                            if (!empty($ses)) {
-                                ?>                            
+                            <?php if (!empty($ses)) { ?>                            
                                 <?php if ($ses == '1') { ?>
                                     <div><a  onclick="Logout()" href="">Admin</a></div>
                                 <?php } elseif ($ses == '2') { ?>
@@ -45,6 +43,7 @@
                                 <?php } ?>
 
                             <?php } else { ?>
+                                <div><a data-toggle="modal" data-target="#modal-register" href="">Register</a></div>
                                 <div><a data-toggle="modal" data-target="#modal-login" href="">Sign in</a></div>       
                             <?php } ?>
 
