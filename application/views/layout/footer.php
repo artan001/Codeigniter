@@ -10,7 +10,7 @@
                     <div class="logo_container">
                         <div class="logo"><a href="#">NADONG</a></div>
                     </div>
-                    <div class="footer_title">Got Question? Call Us 24/7</div>
+                    <div class="footer_title">Got Question? Call Us </div>
                     <div class="footer_phone">092 448 4333</div>
                     <div class="footer_contact_text">
                         <p>4 Bangkok Kritha Rd,Thub Chang,Saphan Sung </p>
@@ -37,17 +37,15 @@
                         <li><a href="#">Hardware</a></li>
                         <li><a href="#">Smartphones & Tablets</a></li>
                         <li><a href="#">TV & Audio</a></li>
-                    </ul>
-                    <div class="footer_subtitle">Gadgets</div>
-                    <ul class="footer_list">
-                        <li><a href="#">Car Electronics</a></li>
-                    </ul>
+                    </ul>                 
                 </div>
             </div>
 
             <div class="col-lg-2">
                 <div class="footer_column">
-                    <ul class="footer_list footer_list_2">
+                    <div class="footer_title">Gadgets</div>
+                    <ul class="footer_list ">
+                        <li><a href="#">Car Electronics</a></li>
                         <li><a href="#">Video Games & Consoles</a></li>
                         <li><a href="#">Accessories</a></li>
                         <li><a href="#">Cameras & Photos</a></li>
@@ -84,10 +82,10 @@
             <div class="col">
 
                 <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
-                    <div class="copyright_content"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+<!--                    <div class="copyright_content"> Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. 
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </div>
+                         Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. 
+                    </div>-->
                     <div class="logos ml-sm-auto">
                         <ul class="logos_list">
                             <li><a href="#"><img src="assets/images/logos_1.png" alt=""></a></li>
