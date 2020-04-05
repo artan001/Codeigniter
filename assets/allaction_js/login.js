@@ -6,7 +6,7 @@ $('#btn-login').on('click', function () {
     $('#message-alert-login').hide();
     var username = $('#username').val();
     var password = $('#password').val();
-
+    var usertype = $('#usertype').val();
     if (username == '') {
         message = message.concat("- กรุณากรอก USERNAME <br>");
     }

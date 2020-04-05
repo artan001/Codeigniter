@@ -40,6 +40,9 @@ and open the template in the editor.
             foreach ( $modal as $value){
                 $this->load->view("/" . $value);
             }
+            foreach ( $modaladd as $values){
+                $this->load->view("/" . $values);
+            }
             ?>
             
         </div>

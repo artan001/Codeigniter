@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends MY_Controller {
+class Test extends MY_Controller {
 
     /**
      * Index Page for this controller.
@@ -30,21 +30,7 @@ class Welcome extends MY_Controller {
         $this->modaladd =[];
         $this->scriptadd = 'layout/home/down_home';
         $this->dataresult = TEMPLATE_A; //defind มาจาก my_constants ซึ่ง custom template เองใน view/template/''''
-        $this->newlayout(); // เรียก layout มาจาก MY_Controller ซึ่งกำหนด page  และ template เอง
-//        $result = $this->Login_Model->usertype();
-//        if ($result->num_rows() > 0) {
-//            $data['dbrow'] = $result->result();
-//        } else {
-//            $data['dbrow'] = null;
-//        }
-//        $result->free_result();
-//        $data['header'] = 'layout/header';
-//        $data['page'] = 'home';
-//        $data['footer'] = 'layout/footer';
-//        $data['down'] = 'layout/down_home';
-//        $data['modal'] = ['layout/modal/modal_login',
-//                          'layout/modal/modal_register'];
-//        $this->load->view(TEMPLATE_WELCOME, $data);
+        $this->newlayout();
     }
 
 }

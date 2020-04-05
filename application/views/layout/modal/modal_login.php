@@ -28,6 +28,21 @@
                             </div>
                             <input type="password" class="form-control" placeholder="password" id="password" name="password">
                         </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" for="usertype">TYPE</span>
+                            </div>
+                            <select class="form-control" id="usertype">
+                              <option selected>-SELECT-</option>
+                              
+                              <?php foreach ( $dbrow as $key ): ?>
+                              <?php echo'<option value = "'.$key->ID . '">' . $key->type_name .'</option>'; ?>                             
+                              <?php endforeach; ?>
+                              <!--<option value="1">ADMIN</option>-->
+                              <!--<option value="2">CUSTOMER</option>-->
+                              <!--<option value="3">EMPLOYEE</option>-->
+                            </select>
+                        </div>
                         <div class="col-md-12">
                             <div class="alert alert-danger" style="display:none" role="alert" id="message-alert-login"></div>
                         </div>

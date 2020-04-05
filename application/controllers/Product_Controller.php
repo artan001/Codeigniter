@@ -12,20 +12,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * @author Artan.s
  */
-class Product_Controller extends CI_Controller {
+class Product_Controller extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
     }
 
     public function index() {
-        $data = array();
-        $data['header'] = 'layout/header';
-        $data['page'] = 'layout/product/page_product';
-        $data['footer'] = 'layout/footer';
-        $data['modal'] = ['layout/modal/modal_login',
-                          'layout/modal/modal_register'];
-        $this->load->view(TEMPLATE_PRODUCT, $data);
+        $this->modaladd = [];
+        $this->page = 'layout/product/page_product';
+        $this->dataresult = TEMPLATE_PRODUCT; 
+        $this->layout();
     }
 
 }

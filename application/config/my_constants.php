@@ -16,6 +16,7 @@ define('LOG_WITH_SYSTEM', 1); //   errors
 define('LOG_WITH_USER', 2); //   errors
 define('TABLE_LOG','PCC_AUTHEN_LOG'); //Table Log
 //template
+define('TEMPLATE_A', 'template/TEMPLATE'); //  หน้าหลักเรียกใช้ได้หมด แต่ต่างกับข้างล่างคือ ต้องกำหนอดส่วนของ TOP กับ DOWN ที่เรียกสคริป
 
 define('TEMPLATE_WELCOME', 'template/TEMPLATE-HOME'); //  หน้าแรก
 define('TEMPLATE_SHOP', 'template/TEMPLATE-SHOP'); //   หน้า shop

@@ -29,5 +29,10 @@ class Login_Model extends CI_Model {
         $query = $this->db->query($sql);
         return $query->row();
     }
+    public function usertype(){
+        $sql = "SELECT * FROM user_type ";
+        $query = $this->db->query($sql);
+        return $query;
+    }
 
 }

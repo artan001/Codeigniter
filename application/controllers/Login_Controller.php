@@ -20,34 +20,43 @@ class Login_Controller extends CI_Controller {
     }
 
     public function index() {
-        $data = array();
-        $data['top'] = 'layout/home/head_home';
-        $data['header'] = 'layout/header';
-        $data['page'] = 'home';
-        $data['footer'] = 'layout/footer';
-        $data['down'] = 'layout/down_home';
-        $data['modal'] = ['layout/modal/modal_login',
-                          'layout/modal/modal_register'];
-        $this->load->view(TEMPLATE_WELCOME, $data);
+//        $data = array();
+//        $data['top'] = 'layout/home/head_home';
+//        $data['header'] = 'layout/header';
+//        $data['page'] = 'home';
+//        $data['footer'] = 'layout/footer';
+//        $data['down'] = 'layout/down_home';
+//        $data['modal'] = ['layout/modal/modal_login',
+//                          'layout/modal/modal_register'];
+//        $this->load->view(TEMPLATE_WELCOME, $data);
+        $this->page = 'home';
+        $this->dataresult = TEMPLATE_WELCOME; 
+        $this->layout(); 
     }
 
     public function login() {
         $username = $this->input->post('username');
-        $password = $this->input->post('password');
+        $password = $this->input->post('password');      
+        
         $query = $this->login_model->user_login($username, $password);
-
         if ($query) {
-            $chk = $query->type;
-            if ($chk == '1') {
-                $this->session->set_userdata('user', $chk);                
+            $status = $query->status;
+            if( $status == "1"){
+                $chk = $query->type;
+                if ($chk == '1') {
+                    $this->session->set_userdata('user', $chk);                
+                } else {
+                    $this->session->set_userdata('user', $chk);
+                }
+                $obj["result"] = true;
             } else {
-                $this->session->set_userdata('user', $chk);
+                $obj["result"] = false;
+                $obj["message"] = "- กรุณายืนยันตัวตน \n";
             }
-            $obj["result"] = true;
         } else {
             $this->session->set_userdata('user', 'null');
             $obj["result"] = false;
-            $obj["message"] = "- กรุณตรวจสอบ username กับ password ให้ถูกต้อง \n";
+            $obj["message"] = "- กรุณาตรวจสอบ username กับ password ให้ถูกต้อง \n";
         }
         echo json_encode($obj);
     }
