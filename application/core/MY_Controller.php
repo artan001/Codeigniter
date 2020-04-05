@@ -17,9 +17,11 @@ class MY_Controller extends CI_Controller {
     public function __construct() {
         parent::__construct();
     }
+    public function chkuser(){
+        
+    }
 
     var $data = array();
-
     public function layout() {
         $this->load->model('Login_Model');
 
@@ -35,7 +37,7 @@ class MY_Controller extends CI_Controller {
         $this->data['footer'] = 'layout/footer';
 //        $this->data['down'] = 'layout/down_home';
         $this->data['modal'] = ['layout/modal/modal_login',
-            'layout/modal/modal_register'];
+                                'layout/modal/modal_register'];
         $this->data['modaladd'] = $this->modaladd;
         $this->load->view($this->dataresult, $this->data);
     }
@@ -57,7 +59,7 @@ class MY_Controller extends CI_Controller {
         $this->data['footer'] = 'layout/footer';
 //        $this->data['down'] = 'layout/down_home';
         $this->data['modal'] = ['layout/modal/modal_login',
-            'layout/modal/modal_register'];
+                                'layout/modal/modal_register'];
         $this->data['modaladd'] = $this->modaladd;
         $this->data['scriptadd'] = $this->scriptadd; //เพิ่ม script ส่วนของscript ท้าย body
         $this->load->view($this->dataresult, $this->data);

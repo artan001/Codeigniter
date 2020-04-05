@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * @author Artan.s
  */
-class Login_Controller extends CI_Controller {
+class Login_Controller extends MY_Controller {
 
     function __construct() {
         parent::__construct();
@@ -20,36 +20,39 @@ class Login_Controller extends CI_Controller {
     }
 
     public function index() {
-//        $data = array();
-//        $data['top'] = 'layout/home/head_home';
-//        $data['header'] = 'layout/header';
-//        $data['page'] = 'home';
-//        $data['footer'] = 'layout/footer';
-//        $data['down'] = 'layout/down_home';
-//        $data['modal'] = ['layout/modal/modal_login',
-//                          'layout/modal/modal_register'];
-//        $this->load->view(TEMPLATE_WELCOME, $data);
+        $this->headadd = 'layout/home/head_home';
         $this->page = 'home';
-        $this->dataresult = TEMPLATE_WELCOME; 
-        $this->layout(); 
+//        $this->modaladd = ['layout/modal/modal_register']; ถ้ามี modalที่ต้องการเพิ่ม ให้เพิ่มเป็นรูปแบบ array ถ้าไม่มีให้ทำแบบด้านล่าง
+        $this->modaladd = [];
+        $this->scriptadd = 'layout/home/down_home';
+        $this->dataresult = TEMPLATE_A; //defind มาจาก my_constants ซึ่ง custom template เองใน view/template/''''
+        $this->newlayout(); // เรียก layout มาจาก MY_Controller ซึ่งกำหนด page  และ template เอง
     }
 
     public function login() {
         $username = $this->input->post('username');
-        $password = $this->input->post('password');      
-        
+        $password = $this->input->post('password');
+
         $query = $this->login_model->user_login($username, $password);
         if ($query) {
             $status = $query->status;
-            if( $status == "1"){
+            if ($status == "1") 
+            {
                 $chk = $query->type;
                 if ($chk == '1') {
-                    $this->session->set_userdata('user', $chk);                
+                    $this->session->set_userdata('user', $chk);
                 } else {
                     $this->session->set_userdata('user', $chk);
                 }
                 $obj["result"] = true;
-            } else {
+            } 
+            elseif ($status == "2") 
+            {
+                $obj["result"] = false;
+                $obj["message"] = "- กรุณายืนยันตัวตน \n";
+            }
+            else 
+            {
                 $obj["result"] = false;
                 $obj["message"] = "- กรุณายืนยันตัวตน \n";
             }
