@@ -21,7 +21,7 @@ class Login_Controller extends MY_Controller {
 
     public function index() {
         $this->headadd = 'layout/home/head_home';
-        $this->page = 'home';
+        $this->page = 'layout/home/page_home';
 //        $this->modaladd = ['layout/modal/modal_register']; ถ้ามี modalที่ต้องการเพิ่ม ให้เพิ่มเป็นรูปแบบ array ถ้าไม่มีให้ทำแบบด้านล่าง
         $this->modaladd = [];
         $this->scriptadd = 'layout/home/down_home';
