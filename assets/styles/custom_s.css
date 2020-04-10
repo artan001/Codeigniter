@@ -1,0 +1,6 @@
+/*Start autu fixed*/
+.main_nav.active {
+    position:fixed;
+    top :0px;
+}
+/*End autu fixed*/
